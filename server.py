@@ -32,11 +32,11 @@ def threaded_client(connection):
 #    thread1 = threading.Thread(target=threaded_client)
 
 
-
+ThreadCount = 0
 while True:
-    Client, address = ServerSocket.accept()
+    Client, address = s.accept()
     print('Connected to: ' + address[0] + ':' + str(address[1]))
-    start_new_thread(threaded_client, (Client, ))
+    threading.start_new_thread(threaded_client, (Client, ))
     ThreadCount += 1
     print('Thread Number: ' + str(ThreadCount))
-ServerSocket.close()
+s.close()
