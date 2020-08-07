@@ -1,7 +1,7 @@
 import socket
 import _thread
 
-IP = "90.253.225.244"
+IP = input("Server IP: ")
 PORT = 25565
 
 rcvesock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
