@@ -9,7 +9,7 @@ s.listen(5)
 HEADERSIZE = 10
 
 
-def threaded_client(connection)
+def threaded_client(connection):
     i = 0
     
     connection.send(bytes("welcome to the Server!", "utf-8"))
